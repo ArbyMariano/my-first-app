@@ -1,16 +1,22 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
+import { ResponsiveBar } from "@nivo/bar";
+
+const data = [
+  { country: "France", value: 42 },
+  { country: "Germany", value: 35 },
+  { country: "Spain", value: 28 },
+  { country: "Italy", value: 31 },
+  { country: "UK", value: 22 },
+];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <h1>Hello world!</h1>
-      <p>Test hello world again!!!</p>
+      <p>Adding bar chart from Nivo library</p>
+      <div style={{ height: 400, marginTop: "50px" }}>
+        <ResponsiveBar data={data} keys={["value"]} indexBy="country" />
+      </div>
     </>
   );
 }

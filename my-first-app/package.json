@@ -11,6 +11,7 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
+    "@nivo/bar": "^0.99.0",
     "d3": "^7.9.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
